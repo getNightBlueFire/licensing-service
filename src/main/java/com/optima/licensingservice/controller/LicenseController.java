@@ -35,7 +35,8 @@ public class LicenseController {
         License license = licenseService.getLicense(organizationId, licenseId);
         license.add(
                 linkTo(methodOn(LicenseController.class).getLicense(organizationId, licenseId)).withSelfRel(),
-                linkTo(methodOn(LicenseController.class).createLicense(organizationId, license, null)).withRel("createLicense"),
+                linkTo(methodOn(LicenseController.class).createLicense(organizationId, license, null))
+                        .withRel("createLicense"),
                 linkTo(methodOn(LicenseController.class).updateLicense(organizationId, license))
                         .withRel("updateLicense"),
                 linkTo(methodOn(LicenseController.class).deleteLicense(organizationId, licenseId))
